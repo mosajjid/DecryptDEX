@@ -23,6 +23,7 @@ export function useNetworkConnectorUpdater() {
     if (!parsedQueryChainId && chainId === ChainId.BSC) return
     if (parsedQueryChainId !== chainId && isChainSupported(chainId)) {
       const uriHash = getHashFromRouter(router)?.[0]
+      console.log("uri hash is----->",uriHash);
       router.replace(
         {
           query: {
